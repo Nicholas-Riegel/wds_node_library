@@ -1,1 +1,1 @@
-# Web Dev Simpligied NodeJS Tutorial
+# Web Dev Simplified NodeJS Tutorial
