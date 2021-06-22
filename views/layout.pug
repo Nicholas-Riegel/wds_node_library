@@ -6,8 +6,6 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    h1 Before 
-    br
-    block content 
-    br
-    h1 After
+    include partials/header
+    include partials/errorMessage
+    block content
