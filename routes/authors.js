@@ -5,10 +5,11 @@ const AuthorModel = require('../models/author')
 // all authors
 router.get('/', async (req, res) => {
     let searchOptions = {}
-    if (req.query.name1 != null && req.query.name1 !== "") {
+    if (req.query.name1 !== null && req.query.name1 !== "") {
         searchOptions.name = new RegExp(req.query.name1, 'i')//case insensitive
     }
     try {
+        // const all_authors = await AuthorModel.find({})// to find everything
         const all_authors = await AuthorModel.find(searchOptions)
         res.render('authors/index', {
             all_authors,
@@ -21,7 +22,7 @@ router.get('/', async (req, res) => {
 
 // new author form
 router.get('/new', (req, res) => {
-    res.render('authors/new' /*, { author_model: new AuthorModel()}*/)
+    res.render('authors/new', { author_model: new AuthorModel()})
 })
 
 // create new author

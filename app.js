@@ -36,3 +36,6 @@ app.use('/', indexRouter)
 
 const authorsRouter = require('./routes/authors')
 app.use('/authors', authorsRouter)
+
+const booksRouter = require('./routes/books')
+app.use('/books', booksRouter)
